@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1> A Lovely Link</h1>
+      <a href="https://www.cricbuzz.com/live-cricket-scores/91735/srh-vs-rr-qualifier-2-indian-premier-league-2024">Live Score</a>
+
+      <p id="para"></p>
+
+      <script>
+        let aTags = document.getElementsByTagName('a')[0];
+        let para = document.getElementById('para');
+
+        let linkOfTag = aTags.href
+        
+        aTags.addEventListener("click", customLink)
+
+        function customLink(eventDetails){
+            eventDetails.preventDefault();
+            para.innerText = "You are going to visit " + linkOfTag;
+        }
+
+
+
+
+      </script>
+</body>
+</html>
